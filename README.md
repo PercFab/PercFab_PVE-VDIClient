@@ -108,7 +108,7 @@ Run the following commands if you wish to build a binary on a Debian/Ubuntu Linu
     cd ./PercFab_PVE-VDIClient/
     chmod +x requirements.sh
     ./requirements.sh
-    pip3 install pyinstaller --break-system-packages
+    sudo pip3 install pyinstaller --break-system-packages
     pyinstaller --onefile --noconsole --noconfirm --hidden-import proxmoxer.backends --hidden-import proxmoxer.backends.https --hidden-import proxmoxer.backends.https.AuthenticationError --hidden-import proxmoxer.core --hidden-import proxmoxer.core.ResourceException --hidden-import subprocess.TimeoutExpired --hidden-import subprocess.CalledProcessError --hidden-import requests.exceptions --hidden-import requests.exceptions.ReadTimeout --hidden-import requests.exceptions.ConnectTimeout --hidden-import requests.exceptions.ConnectionError vdiclient.py
 	sudo cp dist/vdiclient /usr/local/bin
     sudo chmod +x /usr/local/bin/vdiclient
